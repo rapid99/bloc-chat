@@ -1,9 +1,10 @@
 (function() {
-	function HomeCtrl() {
-		this.room = "";
+	function HomeCtrl(Room) {
+    console.log("Room", Room)
+		this.room = "foo";
 	}
 
 	angular
 		.module('blocChat')
-		.controller('HomeCtrl', HomeCtrl])
+		.controller('HomeCtrl', ['Room', HomeCtrl])
 })();
