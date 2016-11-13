@@ -19,6 +19,7 @@ body {
 	font-weight: bold;
 }
 
+<<<<<<< Updated upstream
 .r1,
 .r2,
 .r3 {
@@ -41,3 +42,20 @@ body {
 =======
 >>>>>>> c9b571d6729c35c6d2cfd233d257b6bc4420ef7b
 }
+=======
+.room-list {
+	position: relative;
+	top: 100px;
+	left: 30px;
+	width: 300px;
+
+}
+
+.the-list {
+	position: relative;
+	top: 70px;
+	list-style-type: none;
+	color: rgba(145,145,145,1);
+	line-height: 33px;
+}
+>>>>>>> Stashed changes
