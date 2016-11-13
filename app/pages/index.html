@@ -3,43 +3,28 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
       integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-	<div class="side-bar">
-		<div class="chat-title"></div>
-		<div class="room-list">
-			<ui-view></ui-view>
-      <div class="r1"></div>
-      <div class="r2"></div>
-      <div class="r3"></div>
-	</div>
-	
-	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  
+  <div class="side-bar">
+    <div class="chat-title">
+      <strong>Bloc Chat</strong>
+    </div>
+
+    <ui-view></ui-view>
+    
+  </div>
+
+  
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
     <script src="/scripts/app.js"></script>
-	<script src="/scripts/services/Room.js"></script>
-	<script src="/scripts/controllers/HomeCtrl.js"></script>
-  <script>
-
-
-  // var chatTitle = document.getElementsByClassName("chat-title");
-  // var room1 = document.getElementsByClassName("r1");
-  // var room2 = document.getElementsByClassName('r2');
-  // var room3 = document.getElementsByClassName('r3');
-  // var chatTitleDB = firebase.database().ref().child('title');
-  // var room1DB = firebase.database().ref().child("rm1");
-  // var room2DB = firebase.database().ref().child("rm2");
-  // var room3DB = firebase.database().ref().child("rm3");
-  // chatTitleDB.on('value', snap => chatTitle[0].innerText = snap.val());
-  // room1DB.on('value', snap => room1[0].innerText = snap.val());
-  // room2DB.on('value', snap => room2[0].innerText = snap.val());
-  // room3DB.on('value', snap => room3[0].innerText = snap.val());
-
-</script>
+  <script src="/scripts/services/Room.js"></script>
+  <script src="/scripts/controllers/HomeCtrl.js"></script>
 </body>
 </html>

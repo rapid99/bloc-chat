@@ -15,29 +15,5 @@ body {
 	position: relative;
 	top: 45px;
 	left: 40px;
-<<<<<<< HEAD
 	font-weight: bold;
-}
-
-.r1,
-.r2,
-.r3 {
-	position: relative;
-	color: rgba(127,127,127,0.7);
-	font-size: 18px;
-	left: 40px;
-}
-
-.r1 {
-	top: 75px;
-}
-
-.r2 {
-	top: 90px;
-}
-
-.r3 {
-	top: 105px;
-=======
->>>>>>> c9b571d6729c35c6d2cfd233d257b6bc4420ef7b
 }

@@ -1,5 +1,6 @@
 (function() {
 	function Room($firebaseArray) {
+
 		// Initialize Firebase
   		var config = {
 	   		apiKey: "AIzaSyCaCdFB-gBlrcaAVPcIe62ojTc27nPJdyQ",
@@ -8,18 +9,15 @@
 			storageBucket: "bloc-chat-47eb6.appspot.com",
 			messagingSenderId: "385055766743"
  		};
-  		firebase.initializeApp(config);
-  		app.controller('HomeCtrl', ["$scope", "$firebaseArray", 
-  			function($scope, $firebaseArray) {
-				var ref = firebase.database().ref().child("rooms");
-				var rooms = $firebaseArray(ref);
-				rooms.$add({room1: "Room 1"});
-				$scope.rooms = rooms;
-			}
-		]);
-	}
+ 		
+ 		firebase.initializeApp(config);
+		var ref = firebase.database().ref().child("rooms");
+		var rooms = $firebaseArray(ref);
 
-		return Room;
+		return {
+			all: rooms
+		};
+	}
 
 	angular
 		.module('blocChat')
