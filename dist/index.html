@@ -14,6 +14,10 @@
       <strong>Bloc Chat</strong>
     </div>
 
+    <div class="btn-group" ng-controller="HomeCtrl as home">
+      <a class="btn btn-primary" btn-checkbox ng-click="home.addRoom()">New room</a>
+    </div>
+
     <ui-view></ui-view>
     
   </div>
