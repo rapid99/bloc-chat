@@ -1,7 +1,7 @@
 (function() {
 	function HomeCtrl(Room) {
-    console.log("Room", Room)
-		this.room = "foo";
+    // console.log("Room", Room.database())
+		this.room = "whatever";
 	}
 
 	angular
