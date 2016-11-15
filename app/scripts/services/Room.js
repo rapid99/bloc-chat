@@ -5,6 +5,8 @@
 		var rooms = $firebaseArray(ref.child('rooms'));
     console.log("rooms", rooms)
 
+    console.log(ref.set({timestamp: "foo"}))
+
 		return {
 			all: rooms
 		};
