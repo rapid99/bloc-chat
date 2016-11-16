@@ -1,9 +1,13 @@
 (function() {
-	function MakeRoomCtrl(){
-		this.room = "Room";
+	function MakeRoomCtrl(Room){
+		this.showModal = false;
+
+		this.toggleModal =  function() {
+			this.showModal = !this.showModal;
+		}
 	}
 
 	angular
 		.module('blocChat')
-		.controller('MakeRoomCtrl', MakeRoomCtrl)
+		.controller('MakeRoomCtrl', ['Room', MakeRoomCtrl])
 })();

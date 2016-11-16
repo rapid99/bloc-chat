@@ -1,3 +1,7 @@
+<div class="btn-group" ng-controller="MakeRoomCtrl as makeRoom">
+	<a class="btn btn-primary" ui-sref="new">New room</a>
+</div>
+
 <ul class="display-list">
-	{{home.room}}
+	<li ng-repeat="item in home.rooms | filter:name">{{ item.$value | json }}</li>
 </ul>

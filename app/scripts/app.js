@@ -10,7 +10,14 @@
 				url: '/',
 				controller: 'HomeCtrl as home',
 				templateUrl: '/templates/home.html'
+			})
+
+			.state('new', {
+				url: '/new',
+				controller: 'MakeRoomCtrl as makeRoom',
+				templateUrl: '/templates/makeRoom.html'
 			});
+
 
 	}
 

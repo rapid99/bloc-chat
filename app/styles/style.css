@@ -42,7 +42,6 @@ body {
 }
 
 .display-list {
-	border: 3px solid black;
 	position: relative;
 	top: 75px;
 	height: 170px;
