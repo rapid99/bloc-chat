@@ -2,9 +2,15 @@
 	<a class="btn btn-primary" ui-sref="new">New room</a>
 </div>
 
-<ul class="display-list">
-	<li ng-repeat="item in home.rooms">{{ item.$value | json}}</li>
+<ul class="display-list" ng-controller="HomeCtrl as home">
+	<li ng-repeat="item in home.rooms()" ng-click="home.activeRoom()">{{ item.$value }}</li>
 </ul>
+
+<div class='room-ctn'>
+	<div class="room-name" ng-repeat="item in home.activeRoom()">{{ item.$value }}</div>
+	<div class="room-messages"></div>
+</div>
+
 
 <div class="container" ng-hide="true" ng-controller="MakeRoomCtrl as makeRoom">
 	<div>
@@ -15,7 +21,7 @@
 	        <p>Enter a room name</p>
 	    </div>
 	    <div class="room-name">
-	   		<input type="textbox" placeholder="enter a room name here" ng-model="makeRoom.name">
+	   		<input type="textbox" placeholder="enter a room name here" ng-modal="makeRoom.name">
 	    </div>
 	</div>
 
@@ -24,3 +30,5 @@
 	    <button class="btn" ui-sref="home">Cancel</button>
 	</div>
 </div>
+
+
