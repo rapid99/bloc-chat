@@ -7,3 +7,5 @@
 		.module('blocChat')
 		.controller('HomeCtrl', ['Room', HomeCtrl])
 })();
+
+
