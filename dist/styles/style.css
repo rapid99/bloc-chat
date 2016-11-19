@@ -1,11 +1,12 @@
 body {
 	width: 1400px;
 	height: 800px;
+	background-color: rgba(127,127,127,0.2);
 }
 
 .side-bar {
 	width: 25%;
-	background-color: rgba(127,127,127,0.4);
+	background-color: rgba(127,127,127,0.4	);
 	height: 100%;
 
 }
@@ -27,11 +28,11 @@ body {
 
 }
 
-.the-list {
+.display-list {
 	position: relative;
 	top: 70px;
 	list-style-type: none;
-	color: rgba(145,145,145,1);
+	color: rgba(100,100,100,1);
 	line-height: 33px;
 }
 
@@ -46,4 +47,5 @@ body {
 	top: 75px;
 	height: 170px;
 }
+
 
