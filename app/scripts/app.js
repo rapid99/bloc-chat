@@ -11,6 +11,11 @@
 				controller: 'HomeCtrl as home',
 				templateUrl: '/templates/home.html'
 			})
+			.state('room', {
+				url: '/:room',
+				controller: 'HomeCtrl as home',
+				templateUrl: '/templates/home.html'
+			})
 
 			.state('new', {
 				url: '/new',
