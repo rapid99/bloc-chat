@@ -3,14 +3,20 @@
 </div>
 
 <ul class="display-list" ng-controller="HomeCtrl as home">
-	<li ng-repeat="room in home.rooms()" ng-click="home.activeRoom(room.$value)">{{ room.$value }}</li>
+  <li ng-repeat="room in home.rooms()"> 
+    <a href="/{{room.$value}}">
+      {{ room.$value }}
+    </a>
+  </li>
 </ul>
 
 <div class='room-ctn' ng-controller="HomeCtrl as home">
-	<div class="room-name"></div>
+  <div class="room-name">{{home.currentRoom}}</div>
 	<div class="room-messages">
 		<div class="room-user"></div>
-		<div class="room-content" ng-repeat="messages in home.messages">{{ messages.$value }}</div>
+		<div class="room-content" ng-repeat="messages in home.messages">
+      {{ messages.$value }}
+    </div>
 		<div class="room-time"></div>
 	</div>
 
