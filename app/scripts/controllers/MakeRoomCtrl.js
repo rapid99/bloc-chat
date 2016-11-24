@@ -1,8 +1,8 @@
 (function() {
-	function MakeRoomCtrl(Room, $uibModal){
+	function MakeRoomCtrl(Room){
 		this.name = "";
 	  	this.saveRoom = function(){
-	  		Room.rooms.$add(this.name);
+	  		Room.rooms.$add({title: this.name});
 	  	}
 
 

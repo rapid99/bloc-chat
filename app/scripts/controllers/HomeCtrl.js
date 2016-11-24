@@ -1,5 +1,5 @@
 (function() {
-	function HomeCtrl(Room, Message) {
+	function HomeCtrl(Room, Message, $stateParams) {
 		this.rooms = function() {
 			return Room.rooms;
 		}
@@ -8,15 +8,6 @@
 
 		this.currentRoom = $stateParams.room || "";
 
-
-
-		// var fillName = document.getElementsByClassName('room-name')[0];;
-
-
-		// this.activeRoom = function(room) {
-		// 	fillName.innerText = room
-		// }
-		
 	}
 
 	angular

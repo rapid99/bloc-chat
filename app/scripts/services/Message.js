@@ -1,19 +1,17 @@
 (function() {
-  function Message($firebaseArray) {
-    this.roomID = "room1"
-    var ref = new Firebase('https://bloc-chat-47eb6.firebaseio.com/' + this.roomID + '/messages');
-    ref.set ({
-      message1: "test",
-      message2: "doubletest",
-    });
+  function Message($firebaseArray, $stateParams) {
+    this.roomID = $stateParams.room;
+    var ref = new Firebase('https://bloc-chat-47eb6.firebaseio.com/rooms/' + this.roomID + '/messages');
     var messagesObj = $firebaseArray(ref);
     this.messages = messagesObj
+    console.log(messagesObj);
     return this;
-        
+
+    
   }
 
   angular
     .module('blocChat')
-    .factory('Message', ['$firebaseArray', Message]);
+    .factory('Message', ['$firebaseArray', "$stateParams", Message]);
 
 })();

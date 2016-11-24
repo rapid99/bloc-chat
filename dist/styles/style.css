@@ -50,8 +50,8 @@ body {
 
 .room-ctn {
 	position: absolute;
-	left: 30%;
-	top: 5px;
+	left: 350px;
+	top: 1px;
 	height: 800px;
 	width: 70%;
 	background-color: white;

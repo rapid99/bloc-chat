@@ -11,7 +11,6 @@
 				controller: 'HomeCtrl as home',
 				templateUrl: '/templates/home.html'
 			})
-
 			.state('room', {
 				url: '/:room',
 				controller: 'HomeCtrl as home',
@@ -27,7 +26,9 @@
 
 	}
 
-	angular
-		.module('blocChat', ['ui.router', 'firebase'])
-		.config(config)
+		angular
+			.module('blocChat', ['ui.router', 'firebase'])
+			.config(config)
 })();
+
+
