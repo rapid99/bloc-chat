@@ -1,7 +1,8 @@
 (function() {
 	function Room($firebaseArray) {
 
-	    var ref = new Firebase('https://bloc-chat-47eb6.firebaseio.com/rooms');
+	    var ref = new Firebase('https://bloc-chat-47eb6.firebaseio.com/rooms/');
+
 		ref.set ({
 			room1: {
 				title: "Room 1",
@@ -13,13 +14,15 @@
 			}, 
 			room3: {
 				title: "Room 3",
-				messages: {m1: "blah blah balh", m2: "test 3", m3: "tetsing testing"}
+				messages: {m1: "blah blah", m2: "test 3", m3: "tetsing testing"}
 			}
 		});
 		var obj = $firebaseArray(ref);
+		console.log(obj);
 
 		this.rooms = obj
 		return this;
+
 
 	}
 

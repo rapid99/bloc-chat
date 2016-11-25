@@ -4,7 +4,7 @@
     var ref = new Firebase('https://bloc-chat-47eb6.firebaseio.com/rooms/' + this.roomID + '/messages');
     var messagesObj = $firebaseArray(ref);
     this.messages = messagesObj
-    console.log(messagesObj);
+
     return this;
 
     

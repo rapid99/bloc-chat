@@ -4,9 +4,17 @@
 			return Room.rooms;
 		}
 
-		this.messages = Message.messages;
+		this.messages = function() {
+			var rooms = Room.rooms.$getRecord($stateParams.room);
+		    var keys = Object.keys(rooms.messages);
+	        var messageArray = keys.map(function(k) {
+		    	return rooms.messages[k]
+		    });
 
-		this.currentRoom = $stateParams.room || "";
+	        return messageArray;
+		}
+
+		this.currentRoom = $stateParams.room || $stateParams.room.title;
 
 	}
 
