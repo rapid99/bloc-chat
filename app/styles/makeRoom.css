@@ -1,0 +1,22 @@
+.modal-header {
+	position: relative;
+	margin-top: 60px;
+}
+
+h4, 
+p {
+	position: relative;
+	left: 25px;
+}
+
+input {
+	width: 320px;
+}
+
+
+.modal-footer {
+	position: relative;
+	right: 380px;
+}
+
+
