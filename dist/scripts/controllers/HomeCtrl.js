@@ -5,7 +5,8 @@
 		}
 
 		this.messages = function() {
-			var rooms = Room.rooms.$getRecord($stateParams.room);
+			var room = $stateParams.room !== undefined ? $stateParams.room : "room1"
+			var rooms = Room.rooms.$getRecord(room);
 		    var keys = Object.keys(rooms.messages);
 	        var messageArray = keys.map(function(k) {
 		    	return rooms.messages[k]
@@ -14,7 +15,13 @@
 	        return messageArray;
 		}
 
-		this.currentRoom = $stateParams.room || $stateParams.room.title;
+		this.currentRoom = roomName($stateParams.room);
+		
+		function roomName(id) {
+			var getRec = Room.rooms.$getRecord(id);
+			return (id !== undefined && getRec) ? getRec.title : "";
+		}
+
 
 	}
 
