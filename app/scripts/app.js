@@ -1,5 +1,3 @@
-require('angular-bootstrap');
-
 (function() {
 	function config($stateProvider, $locationProvider) {
 		$locationProvider

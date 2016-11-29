@@ -6,7 +6,9 @@
 	  		Room.rooms.$add({title: this.name});
 	  	}
 
-	  	this.open = function (size, parentSelector, $uibModal) {
+      console.log($ctrl)
+      console.log($uibModal)
+	  	this.open = function (size, parentSelector) {
 		    var parentElem = parentSelector ? 
 		      angular.element($document[0].querySelector('.modal-demo ' + parentSelector)) : undefined;
 		    var modalInstance = $uibModal.open({
@@ -14,7 +16,7 @@
 		      ariaLabelledBy: 'modal-title',
 		      ariaDescribedBy: 'modal-body',
 		      templateUrl: 'myModalContent.html',
-		      controller: 'ModalInstanceCtrl',
+		      controller: 'MakeRoomCtrl',
 		      controllerAs: '$ctrl',
 		      size: size,
 		      appendTo: parentElem,
@@ -31,6 +33,6 @@
 
 	angular
 		.module('blocChat')
-		.controller('MakeRoomCtrl', ['Room', MakeRoomCtrl])
+		.controller('MakeRoomCtrl', ['Room', '$uibModal', MakeRoomCtrl])
 
 })();
