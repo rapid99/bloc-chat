@@ -5,7 +5,7 @@
 <ul class="display-list" ng-controller="HomeCtrl as home">
   <li ng-repeat="room in home.rooms()"> 
     <a href="/{{room.$id}}">
-      <div>{{ room.title }}</div>
+      <div>{{ home.roomName(room.$id) }}</div>
     </a>
   </li>
 </ul>

@@ -22,6 +22,10 @@
 			return (id !== undefined && getRec) ? getRec.title : "";
 		}
 
+		this.roomName = function(id) {
+			return Room.rooms[id];
+		}
+
 
 	}
 
