@@ -14,7 +14,8 @@
 	        return messageArray;
 		}
 
-		this.currentRoom = $stateParams.room || $stateParams.room.title;
+		this.currentRoom = $stateParams.room || "";
+
 
 	}
 

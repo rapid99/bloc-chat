@@ -18,7 +18,6 @@
 			}
 		});
 		var obj = $firebaseArray(ref);
-		console.log(obj);
 
 		this.rooms = obj
 		return this;
