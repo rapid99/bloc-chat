@@ -8,7 +8,7 @@
 		$stateProvider
 			.state('home', {
 				url: '/',
-				controller: 'HomeCtrl as vm',
+				controller: 'HomeCtrl as home',
 				templateUrl: '/templates/home.html'
 			})
 			.state('room', {
@@ -26,7 +26,8 @@
 
 	}
 
+
 		angular
-			.module('blocChat', ['ui.router', 'firebase'])
+			.module('blocChat', ['ui.router', 'ui.bootstrap', 'firebase'])
 			.config(config)
 })();

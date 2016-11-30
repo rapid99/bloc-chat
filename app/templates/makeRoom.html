@@ -1,20 +1,19 @@
-<body ng-app="blocChat" ng-controller="MakeRoomCtrl as makeRoom">
+<div ng-controller="MakeRoomCtrl as makeRoom" ng-show='show'>
 
-  <div modal="showModal" close="cancel()">
-    <div class="modal-header">
-        <h4>Create a new room</h4>
+    <div close="cancel()">
+      <div class="modal-header">
+          <h4>Create a new room</h4>
+      </div>
+      <div class="modal-body">
+          <p>Enter a room name</p>
+      </div>
+      <div class="room-name">
+        <input type="textbox" placeholder="enter a room name here" ng-model="makeRoom.name"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" ng-click="makeRoom.saveRoom()" ui-sref="home">Okay</button>
+        <button class="btn" ui-sref="home">Cancel</button>
+      </div>
     </div>
-    <div class="modal-body">
-        <p>Enter a room name</p>
-    </div>
-    <div class="room-name">
-      <input type="textbox" placeholder="enter a room name here" ng-model="makeRoom.name"></div>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-success" ng-click="makeRoom.saveRoom()" ui-sref="home">Okay</button>
-      <button class="btn" ui-sref="home">Cancel</button>
-    </div>
-  </div>
 
-</body>
 

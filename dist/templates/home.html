@@ -1,5 +1,5 @@
 <div class="btn-group" ng-controller="MakeRoomCtrl as makeRoom">
-	<a class="btn btn-primary" ui-sref="new">New room</a>
+	<a class="btn btn-primary" ng-click="makeRoom.open()">New room</a>
 </div>
 
 <ul class="display-list" ng-controller="HomeCtrl as home">
@@ -23,7 +23,7 @@
 </div>
 
 
-<div class="container" ng-hide="true" ng-controller="MakeRoomCtrl as makeRoom">
+<!-- <div class="container" ng-hide="true" ng-controller="MakeRoomCtrl as makeRoom" ng-modal >
 	<div>
 	    <div class="modal-header">
 	        <h4>Create a new room</h4>
@@ -41,3 +41,4 @@
 	    <button class="btn" ui-sref="home">Cancel</button>
 	</div>
 </div>
+ -->
