@@ -15,6 +15,7 @@ input {
 
 
 .modal-footer {
+  border: none;
 	position: relative;
 	right: 380px;
 }
