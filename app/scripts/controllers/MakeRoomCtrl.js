@@ -1,6 +1,5 @@
 (function() {
 	function MakeRoomCtrl(Room, $uibModal, $uibModalInstance, ModalInstanceCtrl){
-    console.log(Room.rooms)
     var template = "<div class='modal-dialog' role='document'>" +
       "<div class='content'>" +
         "<div class='modal-header'>" +
