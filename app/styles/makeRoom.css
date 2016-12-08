@@ -1,22 +1,28 @@
 .modal-header {
-	position: relative;
-	margin-top: 60px;
+  position: relative;
+  margin-top: 60px;
 }
 
 h4, 
 p {
-	position: relative;
-	left: 25px;
+  position: relative;
+  left: 25px;
 }
 
 input {
-	width: 320px;
+  width: 320px;
 }
 
 
 .modal-footer {
+  border: none;
+<<<<<<< HEAD
+  position: relative;
+  right: 380px;
+=======
 	position: relative;
 	right: 380px;
+>>>>>>> dd3ed052157b947439c453ad2a269d215019c184
 }
 
 
