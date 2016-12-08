@@ -5,16 +5,28 @@
 		}
 
 		this.messages = function() {
-			var rooms = Room.rooms.$getRecord($stateParams.room);
+			var room = $stateParams.room !== undefined ? $stateParams.room : "room1"
+			var rooms = Room.rooms.$getRecord(room);
 		    var keys = Object.keys(rooms.messages);
-	        var messageArray = keys.map(function(k) {
-		    	return rooms.messages[k]
-		    });
+		   	if (keys.length > 0) {
+		        var messageArray = keys.map(function(k) {
+			    	return rooms.messages[k];
+			    });
+			}
 
 	        return messageArray;
 		}
+		
+		function roomName(id) {
+			var getRec = Room.rooms.$getRecord(id);
+			return (id !== undefined && getRec) ? getRec.title : "";
+		}
 
-		this.currentRoom = $stateParams.room || "";
+		this.roomName = function(id) {
+			return Room.rooms[id];
+		}
+
+		this.currentRoom = roomName($stateParams.room);
 
 
 	}
@@ -23,5 +35,3 @@
 		.module('blocChat')
 		.controller('HomeCtrl', ['Room', 'Message', '$stateParams', HomeCtrl])
 })();
-
-
