@@ -1,5 +1,5 @@
 (function() {
-	function MakeRoomCtrl(Room, $uibModal, $uibModalInstance, ModalInstanceCtrl){
+  function MakeRoomCtrl(Room, $uibModal, $uibModalInstance, ModalInstanceCtrl){
     var template = "<div class='modal-dialog' role='document'>" +
       "<div class='content'>" +
         "<div class='modal-header'>" +
@@ -16,7 +16,7 @@
           "<button class='btn' ng-click='$ctrl.cancel()'>Cancel</button>" +
         "</div>" +
       "</div>" +
-		"</div>"
+    "</div>";
 
     this.open = function (size, parentSelector) {
       var parentElem = parentSelector ?
@@ -31,25 +31,27 @@
         size: size,
         appendTo: parentElem
       });
-		}
+    }
 
-	}
-	
-	angular
-		.module('blocChat')
-		.controller('MakeRoomCtrl', ['Room', '$uibModal', MakeRoomCtrl])
-    	.controller('ModalInstanceCtrl', ['Room', '$uibModalInstance', function (Room, $uibModalInstance) {
-	      	var $ctrl = this;
-	      	$ctrl.roomName = "";
+  }
 
-	      	$ctrl.cancel = function () {
-	        	$uibModalInstance.dismiss('cancel');
-	      	};
+  // The controller passes the instance of an open $uibModal as $uibModalInstance
+  angular
+    .module('blocChat')
+    .controller('MakeRoomCtrl', ['Room', '$uibModal', MakeRoomCtrl])
+    .controller('ModalInstanceCtrl', ['Room', '$uibModalInstance', function (Room, $uibModalInstance) {
+      var $ctrl = this;
+      $ctrl.roomName = "";
+      console.log($ctrl.roomName)
 
-	      	$ctrl.save = function () {
-	        	Room.rooms.$add({title: $ctrl.roomName});
-	        	$uibModalInstance.dismiss('cancel');
-	      	};
+      $ctrl.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+      };
+
+      $ctrl.save = function () {
+        Room.rooms.$add({title: $ctrl.roomName});
+        $uibModalInstance.dismiss('cancel');
+      };
 
     }]);
 

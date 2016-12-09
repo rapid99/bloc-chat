@@ -42,6 +42,11 @@ body {
 	left: 220px;
 }
 
+.userBtn {
+	position: relative;
+	left: 5px;
+}
+
 .display-list {
 	position: relative;
 	top: 75px;
