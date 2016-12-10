@@ -2,6 +2,10 @@
 	<a class="btn btn-primary" ng-click="makeRoom.open()">New room</a>
 </div>
 
+<div class="userNameSpot" ng-controller="SetUsernameInstanceModal as setUser">
+  Username: {{ setUserName().test }}
+</div>
+
 <ul class="display-list" ng-controller="HomeCtrl as home">
   <li ng-repeat="room in home.rooms()"> 
     <a href="/{{room.$id}}">
@@ -21,4 +25,4 @@
 	</div>
 	<input type="textbox" class="message-input">
 </div>
-f
+

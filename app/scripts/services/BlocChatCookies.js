@@ -2,9 +2,9 @@
 
 	function BlocChatCookies($cookies, $uibModal) {
 
-		var template = "<h1>Set Username</h1>" +
+		var template = "<h1 class='set-user-h1'>Set Username</h1>" +
 		"<input class='set-username' placeholder='Enter your username here' ng-model='setNewUsername.name' required type='text'>" +
-		"<button type='button' class='userBtn btn-primary' ng-click='setUserName()'>Set Username</button>";
+		"<button type='button' class='userBtn btn-primary' ng-click='userCtrl.setUserName()' data-dismiss='modal' >Set Username</button>";
 
 		var currentUser = $cookies.get('BlocChatCurrentUser');
 
@@ -14,35 +14,22 @@
 		        ariaDescribedBy: 'modal-body',
 		        template: template,
 		        controller: 'SetUsernameInstanceModal',
-		        controllerAs: '$ctrl'
-      		});
+		        controllerAs: 'userCtrl'
+      		})
 		}
 	}
 
 	angular
 		.module('blocChat')
 		.run(['$cookies', '$uibModal', BlocChatCookies])
-		.controller('SetUsernameInstanceModal', ['$uibModal', '$cookies', function($modalInstance, $cookies) {
-			this.setNewUsername = {
-        		name: ''
-    		};
+		.controller('SetUsernameInstanceModal', ['$uibModal', '$cookies', function($uibModalInstance, $cookies) {
+
 
     		this.setUserName = function () {
-		        var username = this.setNewUsername.name;
-
-		        if (!username === undefined) {
-		            username = username.replace(/^\s+/, '').replace(/\s+$/, '');
-		        }
-
-		        if (username === '' || username === undefined) {
-		            this.usernameError = 'Username cannot be empty';
-		            this.usernameErrorTrue = true;
-		            this.setNewUsername.name = '';
-		            return
-		        } else {
-		            $cookies.blocChatCurrentUser = username;
-		            $uibModalInstance.dismiss();
-		        }
-		    };
-		}]);
+    			var test = "testing testing";
+    			console.log(test);
+    			
+    			
+		    }
+		}])
 })();

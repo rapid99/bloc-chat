@@ -12,6 +12,8 @@
 		        var messageArray = keys.map(function(k) {
 			    	return rooms.messages[k];
 			    });
+			} else { 
+				return //trying not to throw error in console when no messages exist in room
 			}
 
 	        return messageArray;

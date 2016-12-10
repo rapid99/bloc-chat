@@ -6,11 +6,11 @@
 		ref.set ({
 			room1: {
 				title: "Room 1",
-				messages: {m1: "Hello", m2: "random", m3: "blah"}
+				messages: {m1: "Hello room 1", m2: "random", m3: "blah"}
 			}, 
 			room2: {
 				title: "Room 2",
-				messages: {m1: "hi again", m2: "testing", m3: "blah balh"}
+				messages: {m1: "hi again", m2: "testing room 2", m3: "blah balh"}
 			}, 
 			room3: {
 				title: "Room 3",
