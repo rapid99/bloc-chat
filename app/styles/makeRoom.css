@@ -16,19 +16,9 @@ input {
 
 .modal-footer {
   border: none;
-<<<<<<< HEAD
   position: relative;
   right: 380px;
-=======
-<<<<<<< HEAD
-  position: relative;
-  right: 380px;
-=======
-	position: relative;
-	right: 380px;
->>>>>>> dd3ed052157b947439c453ad2a269d215019c184
->>>>>>> c0d4ae37fb30934ef9efa52144ee1cb3021f0954
-}
+
 
 
 .ng-modal-overlay {
