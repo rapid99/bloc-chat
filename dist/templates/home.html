@@ -23,6 +23,9 @@
     	</div>
 		<div class="room-time"></div>
 	</div>
-	<input type="textbox" class="message-input">
+  <div>
+  	<input type="textbox" class="message-input" ng-model="home.messageInput">
+    <button type="button" class="submit" ng-click="home.submitMessage()">Send Message</button>
+  </div>
 </div>
 

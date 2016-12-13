@@ -1,5 +1,5 @@
 (function() {
-	function HomeCtrl(Room, Message, $stateParams) {
+	function HomeCtrl(Room, Message, $stateParams, $cookies) {
 		this.rooms = function() {
 			return Room.rooms;
 		}
@@ -12,8 +12,6 @@
 		        var messageArray = keys.map(function(k) {
 			    	return rooms.messages[k];
 			    });
-			} else { 
-				return //trying not to throw error in console when no messages exist in room
 			}
 
 	        return messageArray;
@@ -29,6 +27,19 @@
 		}
 
 		this.currentRoom = roomName($stateParams.room);
+
+		this.messageInput = null;
+
+		this.submitMessage = function() {
+
+			// var user = $cookies.get('blocChatCurrentUser');
+			var messageInput = this.messageInput;
+			var roomId = $stateParams.room;
+
+			Room.sendNewMessage(messageInput, roomId);
+
+
+		}
 
 
 	}

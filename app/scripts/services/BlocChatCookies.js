@@ -1,9 +1,12 @@
 (function() {	
 	function BlocChatCookies($cookies, $uibModal) {
 
+		var name = null;
+
 		var template = "<h1 class='set-user-h1'>Set Username</h1>" +
 		"<input class='set-username' ng-model='newUsername' required type='text'>" +
 		"<button type='button' class='userBtn btn-primary' ng-click='create()'>Set Username</button>";
+		
 
 		if (!$cookies.get('blocChatCurrentUser') || $cookies.get('blocChatCurrentUser') === '') {
 			var modalInstance = $uibModal.open({
@@ -17,18 +20,23 @@
 							$uibModalInstance.close($scope.newUsername);
 							console.log("Username: " + $scope.newUsername);
 						}
-
-						var username = $scope.newUsername;
 					};
 				},
-				size: 'md'
+				size: 'md',
+				backdrop: 'static',
+				keyboard: false
 			});
 			
 			modalInstance.result.then(function(data) {
 				$cookies.put('blocChatCurrentUser', data);
+				// var user = $cookies.get('blocChatCurrentUser');
+				// console.log(user);
 			});
+
 		}
 
+		// this.username = $cookies.get('blocChatCurrentUser');
+		console.log(name);
 	}
 
 	angular

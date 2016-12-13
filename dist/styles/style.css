@@ -70,6 +70,7 @@ body {
 
 .room-ctn {
 	position: absolute;
+	padding-left: 10px;
 	left: 350px;
 	top: 1px;
 	height: 800px;
@@ -78,7 +79,7 @@ body {
 }
 
 .room-name {
-	position: relative;
+/*	position: relative;*/
 	top: 50px;
 	left: 30px;
 	width: 370px;
@@ -87,8 +88,8 @@ body {
 }
 
 .room-messages {
-	position: relative;
-	top: 60px;
+	/*position: relative;*/
+	/*top: 60px;*/
 	left: 30px;
 	width: 370px;
 	height: 70px;
@@ -96,9 +97,9 @@ body {
 }
 
 .message-input {
-	position: relative;
-	top: 350px;
-	left: 30px;
+	/*position: relative;*/
+/*	top: 350px;
+	left: 30px;*/
 	border: 2px dashed red;
 
 }

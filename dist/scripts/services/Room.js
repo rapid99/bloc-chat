@@ -20,8 +20,24 @@
 		var obj = $firebaseArray(ref);
 
 		this.rooms = obj
-		return this;
 
+		this.sendNewMessage = function(data, roomId, user) {
+			// var user = $cookies.get('blocChatCurrentUser');
+			// var messageInput = this.messageInput;
+			// var roomId = $stateParams.room;
+
+		    var refRoom = new Firebase('https://bloc-chat-47eb6.firebaseio.com/rooms/' + roomId + '/messages/');
+		    var roomObj = $firebaseArray(refRoom);
+		    console.log(roomObj);
+			roomObj.$add(data);
+						console.log(roomId)
+
+			// user: $cookies.get('blocChatCurrentUser'),
+			// messageInput: data.message
+		}
+
+
+		return this;
 
 	}
 
