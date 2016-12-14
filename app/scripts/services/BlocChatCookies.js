@@ -29,14 +29,10 @@
 			
 			modalInstance.result.then(function(data) {
 				$cookies.put('blocChatCurrentUser', data);
-				// var user = $cookies.get('blocChatCurrentUser');
-				// console.log(user);
 			});
 
 		}
 
-		// this.username = $cookies.get('blocChatCurrentUser');
-		console.log(name);
 	}
 
 	angular

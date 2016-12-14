@@ -4,6 +4,12 @@
 			return Room.rooms;
 		}
 
+		this.user = $cookies.get('blocChatCurrentUser');
+
+		this.date = function($scope) {
+			$scope.date = new Date();
+		}
+
 		this.messages = function() {
 			var room = $stateParams.room !== undefined ? $stateParams.room : "room1"
 			var rooms = Room.rooms.$getRecord(room);
@@ -35,8 +41,8 @@
 			// var user = $cookies.get('blocChatCurrentUser');
 			var messageInput = this.messageInput;
 			var roomId = $stateParams.room;
-
-			Room.sendNewMessage(messageInput, roomId);
+			var user = $cookies.get('blocChatCurrentUser');
+			Room.sendNewMessage(messageInput, roomId, user);
 
 
 		}
@@ -46,5 +52,5 @@
 
 	angular
 		.module('blocChat')
-		.controller('HomeCtrl', ['Room', 'Message', '$stateParams', HomeCtrl])
+		.controller('HomeCtrl', ['Room', 'Message', '$stateParams', '$cookies', HomeCtrl])
 })();

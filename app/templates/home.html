@@ -2,8 +2,8 @@
 	<a class="btn btn-primary" ng-click="makeRoom.open()">New room</a>
 </div>
 
-<div class="userNameSpot">
-  Username: <!-- trying to get username to display here -->
+<div class="userNameSpot" ng-controller="HomeCtrl as home">
+  Username: <span class='userName'>{{ home.user }}</span>
 </div>
 
 <ul class="display-list" ng-controller="HomeCtrl as home">
@@ -17,9 +17,8 @@
 <div class='room-ctn' ng-controller="HomeCtrl as home">
   <div class="room-name">{{ home.currentRoom }}</div>
 	<div class="room-messages">
-		<div class="room-user"></div>
 		<div class="room-content" ng-repeat="message in home.messages()">
-      		{{ message }}
+      		 <span class="room-user">{{ home.user }} :</span> {{ message }}
     	</div>
 		<div class="room-time"></div>
 	</div>

@@ -19,6 +19,10 @@ body {
 	font-size: 16px;
 }
 
+.userName {
+	color: rgba(45,105,245,0.9);
+}
+
 .chat-title {
 	font-size: 32px;
 	position: relative;
@@ -32,7 +36,6 @@ body {
 	top: 100px;
 	left: 30px;
 	width: 300px;
-	border: 3px solid black;
 
 }
 
@@ -79,27 +82,22 @@ body {
 }
 
 .room-name {
-/*	position: relative;*/
-	top: 50px;
-	left: 30px;
+	margin-top: 20px;
 	width: 370px;
 	height: 70px;
 	font-size: 24px;
 }
 
-.room-messages {
-	/*position: relative;*/
-	/*top: 60px;*/
-	left: 30px;
-	width: 370px;
-	height: 70px;
-	border: 2px solid black;
+.room-user {
+	font-weight: bold
 }
 
 .message-input {
-	/*position: relative;*/
-/*	top: 350px;
-	left: 30px;*/
-	border: 2px dashed red;
+	border: 2px solid blue;
+}
+
+.message-input,
+.submit {
+	margin-top: 15px;
 
 }
